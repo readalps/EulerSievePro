@@ -1,0 +1,25 @@
+PS H:\Read\num\x64\Release> .\eulerSievePro
+ EulerSievePro: a method to find out all primes below the number that you specify here please: 1234567890
+
+ Only the sum of all primes needed [y/n](y as default):
+
+ Start to work out the sum of all primes below 1234567890...
+ 62106578 primes found in 8687 milliseconds.
+
+PS H:\Read\num\x64\Release> .\eulerSievePro
+ EulerSievePro: a method to find out all primes below the number that you specify here please: 123456789
+
+ Only the sum of all primes needed [y/n](y as default):
+
+ Start to work out the sum of all primes below 123456789...
+ 7027260 primes found in 828 milliseconds.
+
+PS H:\Read\num\x64\Release> .\eulerSievePro
+ EulerSievePro: a method to find out all primes below the number that you specify here please: 12345678
+
+ Only the sum of all primes needed [y/n](y as default):
+
+ Start to work out the sum of all primes below 12345678...
+ 809227 primes found in 94 milliseconds.
+
+PS H:\Read\num\x64\Release>
