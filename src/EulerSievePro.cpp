@@ -37,8 +37,8 @@ bool eulerSievePro(ulong raw_last)
 {
     DWORD tickBegin = GetTickCount();
     ulong last = raw_last / 2;
-    u8* s_pOdd = new u8[last];
-    if (!s_pOdd) {
+    u8* pOdd = new u8[last];
+    if (!pOdd) {
         printf("Lack of memory.\n");
         return false;
     }
@@ -46,10 +46,10 @@ bool eulerSievePro(ulong raw_last)
     ulong sum = 1;
     ulong uplimit = 0;
     s_vecPrime.push_back(2);
-    memset(s_pOdd, 1, last);
+    memset(pOdd, 1, last);
     for (ulong halfIdx = 1; halfIdx < last; ++halfIdx) {
         ulong num = (halfIdx + halfIdx) + 1;
-        if (s_pOdd[halfIdx] == 1) {
+        if (pOdd[halfIdx] == 1) {
             ++sum;
             s_vecPrime.push_back(num);
         }
@@ -62,13 +62,13 @@ bool eulerSievePro(ulong raw_last)
                 uplimit = idx;
                 break;
             }
-            s_pOdd[multiple / 2] = 0;
+            pOdd[multiple / 2] = 0;
             if (num % prime == 0)
                 break;
         }
     }
     std::cout <<" " << sum << " primes found in " << GetTickCount() - tickBegin << " milliseconds.\n\n";
-    delete []s_pOdd;
+    delete []pOdd;
     return true;
 }
 
